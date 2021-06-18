@@ -47,6 +47,8 @@ class MyBodyPage extends StatelessWidget{
           CityDetail(),
           TemperatureDetail(),
           ExtraWeatherDetail(),
+          TextLine(),
+          BottomDetail(),
         ],
       ),
     );
@@ -56,7 +58,7 @@ class MyBodyPage extends StatelessWidget{
 class TextField extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Row(
@@ -187,6 +189,54 @@ class ExtraWeatherDetail extends StatelessWidget{
               Text('%'),
             ],
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class TextLine extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Padding(
+      padding: const EdgeInsets.only(top: 50.0),
+      child: Text('7-DAY WEATHER FORECAST',
+      style: TextStyle(
+        fontFamily: 'Raleway',
+        fontSize: 20.0,
+        fontWeight: FontWeight.bold,
+      ),),
+    );
+  }
+}
+
+class BottomDetail extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100.0,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+        Container(
+          width: 100.0,
+          // height: 100.0,
+          color: Colors.red,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Saturday'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('29 °C'),
+                  Icon(Icons.wb_sunny),
+                ],
+              ),
+            ],
+          ),
+        ),
         ],
       ),
     );

@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget{
       title: "UI Task_2",
       theme: ThemeData(
         brightness: Brightness.dark,
-        primaryColor: Color(0xFFFF5232),
-        scaffoldBackgroundColor: Color(0xFFFF5232),
+        primaryColor: Color(0xFFF44336),
+        scaffoldBackgroundColor: Color(0xFFFF44336),
         // backgroundColor: Color(0xFFFF5336),
       ),
       home: MyHomePage(),
@@ -28,8 +28,8 @@ class MyHomePage extends StatelessWidget{
         centerTitle: true,
         title: Text('Weather Forecast',
         style: TextStyle(
-          fontSize: 22.0,
-          color: Colors.white,
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
         ),),
       ),
       body: MyBodyPage(),
@@ -88,9 +88,7 @@ class CityDetail extends StatelessWidget{
           Text("Kharkiv, UA",
               style:  TextStyle(
                 fontSize: 40.0,
-                fontFamily: 'Raleway',
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
               ),),
           SizedBox(
             height: 10.0,
@@ -98,8 +96,7 @@ class CityDetail extends StatelessWidget{
           Text('Friday, June 18, 2021',
           style: TextStyle(
             fontSize: 19.0,
-            fontFamily: 'Raleway',
-            fontWeight: FontWeight.bold,
+            fontFamily: 'Roboto',
           ),)
         ],
       ),
@@ -111,7 +108,7 @@ class TemperatureDetail extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Padding (
-      padding: EdgeInsets.only(top: 60.0),
+      padding: EdgeInsets.only(top: 48.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -125,15 +122,13 @@ class TemperatureDetail extends StatelessWidget{
             children: [
               Text('26 °С',
               style: TextStyle(
-                fontFamily: 'Raleway',
-                // fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
                 fontSize: 61.0,
               ),),
 
               Text('SUNNY',
                 style: TextStyle(
-                  fontFamily: 'Raleway',
-                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto',
                   fontSize: 17.0,
                 ),),
             ],
@@ -159,10 +154,12 @@ class ExtraWeatherDetail extends StatelessWidget{
               size: 35.0,),
               Text('2',
               style: TextStyle(
+                fontFamily: 'Roboto',
                 fontSize: 21.0,
-
               ),),
-              Text('km/hr'),
+              Text('km/hr', style: TextStyle(
+                fontFamily: 'Roboto',
+              ),),
             ],
           ),
           Column(
@@ -171,10 +168,12 @@ class ExtraWeatherDetail extends StatelessWidget{
                 size: 35.0,),
               Text('98',
               style: TextStyle(
+                fontFamily: 'Roboto',
                 fontSize: 21.0,
-
               ),),
-              Text('%'),
+              Text('%', style: TextStyle(
+                fontFamily: 'Roboto',
+              ),),
             ],
           ),
           Column(
@@ -183,10 +182,12 @@ class ExtraWeatherDetail extends StatelessWidget{
                 size: 35.0,),
               Text('2',
               style: TextStyle(
+                fontFamily: 'Roboto',
                 fontSize: 21.0,
-
               ),),
-              Text('%'),
+              Text('%', style: TextStyle(
+                fontFamily: 'Roboto',
+              ),),
             ],
           ),
         ],
@@ -198,14 +199,12 @@ class ExtraWeatherDetail extends StatelessWidget{
 class TextLine extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Padding(
-      padding: const EdgeInsets.only(top: 50.0),
+      padding: const EdgeInsets.only(top: 53.0),
       child: Text('7-DAY WEATHER FORECAST',
       style: TextStyle(
-        fontFamily: 'Raleway',
+        fontFamily: 'Roboto',
         fontSize: 20.0,
-        fontWeight: FontWeight.bold,
       ),),
     );
   }
@@ -215,28 +214,200 @@ class BottomDetail extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100.0,
+      margin: EdgeInsets.only(top: 15.0, left: 10.0),
+      height: 120.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
         Container(
-          width: 100.0,
-          // height: 100.0,
-          color: Colors.red,
+          width: 165.0,
+          margin: EdgeInsets.only(left: 8.0),
+          color: Color(0xFFE57373),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text('Saturday'),
+              Text('Saturday',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 28.0,
+              ),),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('29 °C'),
-                  Icon(Icons.wb_sunny),
+                  Text('29 °C',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 33.0,
+                  ),),
+                  Icon(Icons.wb_sunny, size: 45.0,),
                 ],
               ),
             ],
           ),
         ),
+          Container(
+            width: 165.0,
+            margin: EdgeInsets.only(left: 8.0),
+            color: Color(0xFFE57373),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('Sunday',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 28.0,
+                  ),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('32 °C',
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 33.0,
+                      ),),
+                    Icon(Icons.wb_sunny, size: 45.0,),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: 165.0,
+            margin: EdgeInsets.only(left: 8.0),
+            color: Color(0xFFE57373),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('Monday',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 28.0,
+                  ),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('30 °C',
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 33.0,
+                      ),),
+                    Icon(Icons.wb_sunny, size: 45.0,),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: 165.0,
+            margin: EdgeInsets.only(left: 8.0),
+            color: Color(0xFFE57373),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('Tuesday',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 28.0,
+                  ),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('28 °C',
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 33.0,
+                      ),),
+                    Icon(Icons.wb_sunny, size: 45.0,),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: 165.0,
+            margin: EdgeInsets.only(left: 8.0),
+            color: Color(0xFFE57373),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('Wednesday',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 28.0,
+                  ),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('29 °C',
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 33.0,
+                      ),),
+                    Icon(Icons.wb_sunny, size: 45.0,),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: 165.0,
+            margin: EdgeInsets.only(left: 8.0),
+            color: Color(0xFFE57373),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('Thursday',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 28.0,
+                  ),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('30 °C',
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 33.0,
+                      ),),
+                    Icon(Icons.wb_sunny, size: 45.0,),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: 165.0,
+            margin: EdgeInsets.only(left: 8.0),
+            color: Color(0xFFE57373),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('Friday',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 28.0,
+                  ),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('31 °C',
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 33.0,
+                      ),),
+                    Icon(Icons.wb_sunny, size: 45.0,),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

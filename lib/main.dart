@@ -63,6 +63,7 @@ class TextField extends StatelessWidget{
       padding: const EdgeInsets.all(10.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Icon(Icons.search, size: 28.0,),
           SizedBox(
@@ -111,6 +112,7 @@ class TemperatureDetail extends StatelessWidget{
       padding: EdgeInsets.only(top: 48.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Icon(Icons.wb_sunny,
           size: 80.0,),
@@ -224,7 +226,6 @@ class BottomDetail extends StatelessWidget{
           margin: EdgeInsets.only(left: 8.0),
           color: Color(0xFFE57373),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text('Saturday',
@@ -251,7 +252,6 @@ class BottomDetail extends StatelessWidget{
             margin: EdgeInsets.only(left: 8.0),
             color: Color(0xFFE57373),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text('Sunday',
@@ -278,7 +278,6 @@ class BottomDetail extends StatelessWidget{
             margin: EdgeInsets.only(left: 8.0),
             color: Color(0xFFE57373),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text('Monday',
@@ -305,7 +304,6 @@ class BottomDetail extends StatelessWidget{
             margin: EdgeInsets.only(left: 8.0),
             color: Color(0xFFE57373),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text('Tuesday',
@@ -332,7 +330,6 @@ class BottomDetail extends StatelessWidget{
             margin: EdgeInsets.only(left: 8.0),
             color: Color(0xFFE57373),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text('Wednesday',
@@ -359,7 +356,6 @@ class BottomDetail extends StatelessWidget{
             margin: EdgeInsets.only(left: 8.0),
             color: Color(0xFFE57373),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text('Thursday',
@@ -386,7 +382,6 @@ class BottomDetail extends StatelessWidget{
             margin: EdgeInsets.only(left: 8.0),
             color: Color(0xFFE57373),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text('Friday',
